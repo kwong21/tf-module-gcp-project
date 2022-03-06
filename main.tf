@@ -5,7 +5,7 @@ data "google_service_account" "terraform" {
 
 resource "random_id" "id" {
   byte_length = 4
-  prefix      = var.project_name
+  prefix      = "${var.project_name}_"
 }
 
 resource "google_project" "project" {
